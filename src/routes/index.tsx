@@ -173,9 +173,9 @@ function Hero() {
 
 const dishes = [
   {
-    name: "The Cutten Boil",
-    desc: "Snow crab, gulf shrimp, andouille, corn & potatoes tossed in our garlic-butter Cajun sauce.",
-    price: "MP",
+    name: "Breakfast Bowl",
+    desc: "Breakfast potatoes, eggs, shredded cheese, bacon bits & chopped fried chicken — finished with microgreens.",
+    price: "$22",
     img: heroBoil,
     tag: "Signature",
   },
