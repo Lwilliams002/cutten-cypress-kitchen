@@ -145,7 +145,7 @@ function Hero() {
             </div>
             <div className="absolute -bottom-4 -left-4 md:-left-6 bg-cream border border-ink/15 px-4 py-3 shadow-[var(--shadow-paper)]">
               <div className="text-[10px] uppercase tracking-[0.25em] text-smoke">House favorite</div>
-              <div className="font-display text-2xl">The Cutten Boil</div>
+              <div className="font-display text-2xl">Breakfast Bowl</div>
             </div>
           </div>
         </div>
