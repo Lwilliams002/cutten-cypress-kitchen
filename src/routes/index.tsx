@@ -299,23 +299,59 @@ function About() {
 }
 
 const menu = {
-  Boils: [
-    ["Snow Crab Cluster (1 lb)", "Garlic butter, Cajun spice", "MP"],
-    ["Gulf Shrimp (1/2 lb)", "Head-on, heavy seasoning", "16"],
-    ["Crawfish (in season)", "Lemon, corn, potato", "MP"],
-    ["The Cutten Combo", "Crab, shrimp, sausage, corn, potato", "48"],
+  Starters: [
+    ["Chicken Bites", "Fried chicken served with our signature sauce", "16"],
+    ["Salmon Bites", "Crispy salmon bites with house-made aioli", "17"],
+    ["Egg Rolls", "Chicken, black beans, corn & Southwestern spice", "14"],
+    ["Chips and Queso", "Creamy homemade queso with fresh chips", "11"],
+    ["Deviled Eggs", "Farm-fresh, whipped to perfection, Sriracha", "11"],
+    ["Spinach Dip", "Spinach, artichokes & melted cheeses, baked", "13"],
+    ["6 Wings", "Tossed in your choice of sauce", "13"],
+    ["10 Wings", "Tossed in your choice of sauce", "19"],
   ],
-  "From the Fryer": [
-    ["Cajun Wings (10)", "Buttermilk-herb dip", "14"],
-    ["Catfish Basket", "Cornmeal crust, slaw, fries", "16"],
-    ["Shrimp Po-Boy", "Remoulade, lettuce, tomato", "15"],
-    ["Fried Oysters (6)", "Lemon, cocktail sauce", "17"],
+  Salads: [
+    ["House Salad", "Chopped greens, tomato, cucumber, choice of dressing", "10"],
+    ["SW Salad", "Blackened chicken, corn, black beans, tortilla strips, SW dressing", "23"],
+    ["Cobb", "Chicken tenders, tomato, bacon, blue cheese, eggs, honey mustard", "23"],
+    ["Caesar", "Romaine, parmesan, cornbread croutons", "19"],
   ],
-  Sides: [
-    ["Dirty Rice", "House recipe", "6"],
-    ["Cajun Fries", "Smoked paprika salt", "5"],
-    ["Mac & Cheese", "Three-cheese, baked", "7"],
-    ["Hushpuppies (6)", "Honey butter", "5"],
+  "Handhelds (with Fries)": [
+    ["Beef Sliders", "Spring mix, tomato, bacon, pepper jack, aioli", "22"],
+    ["Chicken Sliders", "Spring mix, tomato, bacon, pepper jack, aioli", "22"],
+    ["Grilled Sandwich", "Bacon, cheese, lettuce, tomato on Texas toast", "22"],
+    ["Patty Melt", "Half pounder, Swiss, grilled onions, CK pub sauce", "22"],
+    ["Po'Boy", "New Orleans classic — fried shrimp or catfish", "23"],
+  ],
+  "Entrées": [
+    ["Chicken Fried Steak", "Country gravy, mashed potatoes & Jackie's greens", "24"],
+    ["Chicken Fried Chicken", "Country gravy, mashed potatoes & green beans", "24"],
+    ["Ribeye", "14oz USDA Prime, choice of two sides", "51"],
+    ["Lamb Chops", "Jamaican jerk-marinated, grilled to order", "48"],
+    ["Grilled Chicken", "Blackened breast, potatoes & green beans", "26"],
+    ["Fried Shrimp", "8 fried shrimp served over fries", "25"],
+  ],
+  "Brunch (All Day)": [
+    ["Breakfast Bowl", "Potatoes, eggs, cheese, bacon bits, chopped fried chicken", "22"],
+    ["Lamb Chops Breakfast", "4 jerk lamb chops, breakfast potatoes, eggs", "48"],
+    ["Chicken & Waffle", "Crispy saucy wings, golden waffle, maple syrup", "23"],
+    ["Fish & Grits", "Blackened catfish, grits", "24"],
+    ["Shrimp & Grits", "6 blackened shrimp, grits", "26"],
+    ["Fish & Grits Combo", "Blackened catfish and shrimp, grits", "28"],
+    ["French Toast Sliders", "Eggs, cheese, fried chicken, bacon, maple syrup", "25"],
+    ["Gold Rush Toast", "Traditional or cream-stuffed French toast", "15"],
+    ["Chicken Fried Breakfast", "Chicken fried chicken or steak, potatoes & eggs", "25"],
+  ],
+  "Lunch Specials": [
+    ["Lunch Deviled Eggs", "Whipped to perfection, Sriracha garnish", "5"],
+    ["Lunch Egg Rolls", "Chicken, black beans, corn, Southwestern spice", "7"],
+    ["Lunch Dip", "Spinach, artichoke & melted cheeses", "5"],
+    ["Lunch Catfish", "Cornmeal crust with sides", "16"],
+    ["Lunch Salmon", "Pan-seared salmon with sides", "18"],
+    ["Lunch Hamburger", "8oz premium beef, toasted brioche bun", "16"],
+    ["Lunch Lamb Chops", "Jamaican jerk-marinated, grilled", "19"],
+    ["Lunch Wings & Fries", "Tossed in your choice of sauce", "15"],
+    ["Lunch Po'Boy", "Fried shrimp or catfish, New Orleans style", "15"],
+    ["Lunch Pork Chop", "Grilled or fried, herb & spice rubbed", "13"],
   ],
 };
 
