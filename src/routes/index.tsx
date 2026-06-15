@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroBoil from "@/assets/hero-boil.jpg";
+import breakfastBowlAsset from "@/assets/breakfast-bowl.jpg.asset.json";
+const heroBoil = breakfastBowlAsset.url;
 import wings from "@/assets/wings.jpg";
 import crabRice from "@/assets/crab-rice.jpg";
 import shrimp from "@/assets/shrimp.jpg";
