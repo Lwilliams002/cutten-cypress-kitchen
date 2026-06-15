@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroBoil from "@/assets/hero-boil.jpg";
+import breakfastBowlAsset from "@/assets/breakfast-bowl.jpg.asset.json";
+const heroBoil = breakfastBowlAsset.url;
 import wings from "@/assets/wings.jpg";
 import crabRice from "@/assets/crab-rice.jpg";
 import shrimp from "@/assets/shrimp.jpg";
@@ -144,7 +145,7 @@ function Hero() {
             </div>
             <div className="absolute -bottom-4 -left-4 md:-left-6 bg-cream border border-ink/15 px-4 py-3 shadow-[var(--shadow-paper)]">
               <div className="text-[10px] uppercase tracking-[0.25em] text-smoke">House favorite</div>
-              <div className="font-display text-2xl">The Cutten Boil</div>
+              <div className="font-display text-2xl">Breakfast Bowl</div>
             </div>
           </div>
         </div>
@@ -172,9 +173,9 @@ function Hero() {
 
 const dishes = [
   {
-    name: "The Cutten Boil",
-    desc: "Snow crab, gulf shrimp, andouille, corn & potatoes tossed in our garlic-butter Cajun sauce.",
-    price: "MP",
+    name: "Breakfast Bowl",
+    desc: "Breakfast potatoes, eggs, shredded cheese, bacon bits & chopped fried chicken — finished with microgreens.",
+    price: "$22",
     img: heroBoil,
     tag: "Signature",
   },
