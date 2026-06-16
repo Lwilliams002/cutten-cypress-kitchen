@@ -84,9 +84,15 @@ function Nav() {
           <img src={logo} alt="Cutten Kitchen" className="h-9 md:h-11 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-9 text-sm font-medium uppercase tracking-[0.18em]">
-          <a href="#menu" className="hover:text-ember transition-colors">Menu</a>
-          <a href="#about" className="hover:text-ember transition-colors">Story</a>
-          <a href="#visit" className="hover:text-ember transition-colors">Visit</a>
+          <a href="#menu" className="hover:text-ember transition-colors">
+            Menu
+          </a>
+          <a href="#about" className="hover:text-ember transition-colors">
+            Story
+          </a>
+          <a href="#visit" className="hover:text-ember transition-colors">
+            Visit
+          </a>
         </nav>
         <a
           href="https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7"
@@ -118,8 +124,8 @@ function Hero() {
               <span className="block text-stroke">Blazed.</span>
             </h1>
             <p className="mt-6 max-w-xl text-base md:text-lg font-serif italic text-smoke">
-              Houston-born Cajun seafood, slow-smoked wings, and Southern comfort —
-              now firing up plates north of Cypress.
+              Houston-born Cajun seafood, slow-smoked wings, and Southern comfort — now firing up
+              plates north of Cypress.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
@@ -151,7 +157,9 @@ function Hero() {
               <div className="absolute inset-0 ring-1 ring-ink/10" />
             </div>
             <div className="absolute -bottom-4 -left-4 md:-left-6 bg-cream border border-ink/15 px-4 py-3 shadow-[var(--shadow-paper)]">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-smoke">House favorite</div>
+              <div className="text-[10px] uppercase tracking-[0.25em] text-smoke">
+                House favorite
+              </div>
               <div className="font-display text-2xl">Breakfast Bowl</div>
             </div>
           </div>
@@ -281,10 +289,10 @@ function About() {
             <span className="text-ember">kitchen</span> to your <br /> Cypress table.
           </h2>
           <p className="mt-8 font-serif text-lg md:text-xl leading-relaxed text-cream/85 max-w-2xl">
-            Cutten Kitchen started as a neighborhood spot in Houston — built on slow
-            recipes, gulf seafood, and the kind of seasoning your grandmother would
-            nod at. We're bringing that same flame north to Cypress: bigger boils,
-            crispier wings, and a room that feels like a Sunday with family.
+            Cutten Kitchen started as a neighborhood spot in Houston — built on slow recipes, gulf
+            seafood, and the kind of seasoning your grandmother would nod at. We're bringing that
+            same flame north to Cypress: bigger boils, crispier wings, and a room that feels like a
+            Sunday with family.
           </p>
 
           <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 max-w-xl">
@@ -330,7 +338,7 @@ const menu = {
     ["Patty Melt", "Half pounder, Swiss, grilled onions, CK pub sauce", "22"],
     ["Po'Boy", "New Orleans classic — fried shrimp or catfish", "23"],
   ],
-  "Entrées": [
+  Entrées: [
     ["Chicken Fried Steak", "Country gravy, mashed potatoes & Jackie's greens", "24"],
     ["Chicken Fried Chicken", "Country gravy, mashed potatoes & green beans", "24"],
     ["Ribeye", "14oz USDA Prime, choice of two sides", "51"],
@@ -372,8 +380,8 @@ function Menu() {
           What's <span className="text-ember">cooking.</span>
         </h2>
         <p className="mt-4 max-w-xl text-smoke">
-          A taste of the line. Menu rotates with the catch — ask your server about
-          tonight's chef specials.
+          A taste of the line. Menu rotates with the catch — ask your server about tonight's chef
+          specials.
         </p>
       </div>
 
@@ -414,8 +422,8 @@ function Visit() {
             Come hungry. <br /> Leave full.
           </h2>
           <p className="mt-6 text-smoke max-w-md">
-            Pull up to our North Cypress kitchen, or have it brought hot to your
-            door. Big parties welcome — call ahead and we'll set the table.
+            Pull up to our North Cypress kitchen, or have it brought hot to your door. Big parties
+            welcome — call ahead and we'll set the table.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-3">
@@ -446,7 +454,10 @@ function Visit() {
             },
             { k: "Follow", v: ["@cuttenkitchen"] },
           ].map((c) => (
-            <div key={c.k} className="bg-card border border-ink/10 p-6 shadow-[var(--shadow-paper)]">
+            <div
+              key={c.k}
+              className="bg-card border border-ink/10 p-6 shadow-[var(--shadow-paper)]"
+            >
               <div className="text-[10px] uppercase tracking-[0.28em] text-smoke">{c.k}</div>
               <div className="mt-2 space-y-1">
                 {c.v.map((line) => (
@@ -475,9 +486,15 @@ function Footer() {
             <p className="mt-3 font-serif italic">Houston flavor, Cypress address.</p>
           </div>
           <div className="text-xs uppercase tracking-[0.25em] space-y-1.5">
-            <a href="#menu" className="block hover:text-ember">Menu</a>
-            <a href="#about" className="block hover:text-ember">Story</a>
-            <a href="#visit" className="block hover:text-ember">Visit</a>
+            <a href="#menu" className="block hover:text-ember">
+              Menu
+            </a>
+            <a href="#about" className="block hover:text-ember">
+              Story
+            </a>
+            <a href="#visit" className="block hover:text-ember">
+              Visit
+            </a>
           </div>
         </div>
         <div className="mt-10 pt-6 border-t border-cream/15 flex flex-wrap gap-4 justify-between text-[11px] uppercase tracking-[0.25em] text-cream/50">
