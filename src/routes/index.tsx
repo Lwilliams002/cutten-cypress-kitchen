@@ -123,7 +123,9 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#visit"
+                href="https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7"
+                target="_blank"
+                rel="noreferrer"
                 className="bg-ember text-primary-foreground px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ember-deep transition-colors shadow-[var(--shadow-ember)]"
               >
                 Order online
