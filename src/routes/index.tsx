@@ -89,10 +89,12 @@ function Nav() {
           <a href="#visit" className="hover:text-ember transition-colors">Visit</a>
         </nav>
         <a
-          href="#visit"
+          href="https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7"
+          target="_blank"
+          rel="noreferrer"
           className="inline-flex items-center gap-2 bg-ember text-primary-foreground px-4 md:px-5 py-2.5 md:py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.18em] hover:bg-ember-deep transition-colors"
         >
-          Order
+          Order online
           <span aria-hidden>→</span>
         </a>
       </div>
@@ -121,7 +123,9 @@ function Hero() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <a
-                href="#visit"
+                href="https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7"
+                target="_blank"
+                rel="noreferrer"
                 className="bg-ember text-primary-foreground px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ember-deep transition-colors shadow-[var(--shadow-ember)]"
               >
                 Order online
