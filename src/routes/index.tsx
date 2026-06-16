@@ -1,11 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import breakfastBowlAsset from "@/assets/breakfast-bowl.jpg.asset.json";
 const heroBoil = breakfastBowlAsset.url;
-import wings from "@/assets/wings.jpg";
-import crabRice from "@/assets/crab-rice.jpg";
-import shrimp from "@/assets/shrimp.jpg";
+import cornbreadAsset from "@/assets/cornbread.jpg.asset.json";
+import frenchToastAsset from "@/assets/french-toast-sliders.png.asset.json";
+import chickenFriedAsset from "@/assets/chicken-fried-steak.png.asset.json";
 import poboy from "@/assets/poboy.jpg";
 import logo from "@/assets/logo.png";
+const cornbread = cornbreadAsset.url;
+const frenchToast = frenchToastAsset.url;
+const chickenFried = chickenFriedAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -180,25 +183,25 @@ const dishes = [
     tag: "Signature",
   },
   {
-    name: "Garlic Crab & Dirty Rice",
-    desc: "Cajun-spiced crab clusters over house dirty rice, finished with microgreens.",
-    price: "$28",
-    img: crabRice,
+    name: "Cornbread",
+    desc: "Golden, butter-glazed skillet cornbread — sweet, crisp edges, tender middle. House staple.",
+    price: "$8",
+    img: cornbread,
     tag: "Bestseller",
   },
   {
-    name: "Smoked Cajun Wings",
-    desc: "Hand-breaded jumbo wings, crispy outside, juicy inside, with house buttermilk-herb dip.",
-    price: "$14",
-    img: wings,
-    tag: "Crowd pleaser",
+    name: "French Toast Sliders",
+    desc: "Eggs, shredded cheese, fried chicken & bacon stacked on griddled French toast with maple syrup.",
+    price: "$25",
+    img: frenchToast,
+    tag: "Brunch favorite",
   },
   {
-    name: "Skillet Butter Shrimp",
-    desc: "Gulf shrimp seared in spiced butter, lemon, and a kick of cayenne. Bread for sopping.",
-    price: "$19",
-    img: shrimp,
-    tag: "Chef's pick",
+    name: "Chicken Fried Steak",
+    desc: "Creamy country gravy, mashed potatoes & Jackie's greens. A Southern Sunday on a plate.",
+    price: "$24",
+    img: chickenFried,
+    tag: "Popular",
   },
 ];
 
