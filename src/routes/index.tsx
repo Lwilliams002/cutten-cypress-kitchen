@@ -1,14 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import breakfastBowlAsset from "@/assets/breakfast-bowl.jpg.asset.json";
-const heroBoil = breakfastBowlAsset.url;
-import cornbreadAsset from "@/assets/cornbread.jpg.asset.json";
-import frenchToastAsset from "@/assets/french-toast-sliders-v2.jpeg.asset.json";
-import chickenFriedAsset from "@/assets/chicken-fried-steak-v2.jpeg.asset.json";
+import heroBoil from "@/assets/breakfastbowl.jpg";
+import cornbread from "@/assets/cornbread.jpg";
+import frenchToast from "@/assets/frenchtoastslider.jpg";
+import chickenFried from "@/assets/chickenfriedsteak.jpg";
 import poboy from "@/assets/poboy.jpg";
 import logo from "@/assets/logo.png";
-const cornbread = cornbreadAsset.url;
-const frenchToast = frenchToastAsset.url;
-const chickenFried = chickenFriedAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
