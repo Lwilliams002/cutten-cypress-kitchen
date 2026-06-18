@@ -581,7 +581,7 @@ function Visit() {
         <div className="border border-ink/10 shadow-[var(--shadow-paper)] overflow-hidden">
           <iframe
             title="Cutten Kitchen Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.3!2d-95.518!3d29.915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c5c5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2s6935%20Farm%20to%20Market%201960%20Rd%20W%2C%20Houston%2C%20TX%2077069!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+            src="https://maps.google.com/maps?q=6935+Farm+to+Market+1960+Rd+W,Houston,TX+77069&hl=en&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="420"
             style={{ border: 0 }}
