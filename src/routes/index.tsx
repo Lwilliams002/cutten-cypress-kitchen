@@ -454,7 +454,37 @@ function Menu() {
   );
 }
 
+import { useState } from "react";
+import crabRice from "@/assets/crab-rice.jpg";
+import heroBoil2 from "@/assets/hero-boil.jpg";
+import shrimp from "@/assets/shrimp.jpg";
+import wings from "@/assets/wings.jpg";
+
+const GALLERY_IMAGES = [
+  { src: heroBoil, alt: "Breakfast Bowl" },
+  { src: cornbread, alt: "Cornbread" },
+  { src: frenchToast, alt: "French Toast Sliders" },
+  { src: chickenFried, alt: "Chicken Fried Steak" },
+  { src: poboy, alt: "Po'Boy" },
+  { src: crabRice, alt: "Crab Rice" },
+  { src: heroBoil2, alt: "House Bowl" },
+  { src: shrimp, alt: "Shrimp" },
+  { src: wings, alt: "Wings" },
+];
+
+const DIRECTIONS_URL =
+  "https://www.google.com/maps/dir/?api=1&destination=6935+Farm+to+Market+1960+Rd+W,+Houston,+TX+77069";
+
 function Visit() {
+  const [lightbox, setLightbox] = useState<number | null>(null);
+
+  const openLightbox = (index: number) => setLightbox(index);
+  const closeLightbox = () => setLightbox(null);
+  const prevImage = () =>
+    setLightbox((i) => (i === null ? null : i === 0 ? GALLERY_IMAGES.length - 1 : i - 1));
+  const nextImage = () =>
+    setLightbox((i) => (i === null ? null : i === GALLERY_IMAGES.length - 1 ? 0 : i + 1));
+
   return (
     <section id="visit" className="bg-cream-deep border-t border-ink/15">
       <div className="mx-auto max-w-7xl px-5 md:px-8 py-20 md:py-28 grid md:grid-cols-12 gap-10">
@@ -478,7 +508,7 @@ function Visit() {
               Order Online
             </a>
             <a
-              href="https://www.google.com/maps/search/restaurants+north+cypress+tx"
+              href={DIRECTIONS_URL}
               target="_blank"
               rel="noreferrer"
               className="border border-ink/30 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ink hover:text-cream transition-colors"
@@ -490,8 +520,8 @@ function Visit() {
 
         <div className="md:col-span-6 grid sm:grid-cols-2 gap-5">
           {[
-            { k: "Address", v: ["Cutten Kitchen", "North Cypress, TX 77433"] },
-            { k: "Phone", v: ["(281) 555-0100"] },
+            { k: "Address", v: ["6935 FM 1960 Rd W", "Houston, TX 77069"] },
+            { k: "Phone", v: ["(281) 809-4214"] },
             {
               k: "Hours",
               v: ["Tue – Thu · 11a – 9p", "Fri – Sat · 11a – 10p", "Sun · 12p – 8p"],
@@ -514,6 +544,92 @@ function Visit() {
           ))}
         </div>
       </div>
+
+      {/* Photo Gallery */}
+      <div className="mx-auto max-w-7xl px-5 md:px-8 pb-20 md:pb-28">
+        <div className="text-center mb-10">
+          <div className="text-xs uppercase tracking-[0.28em] text-ember mb-2">Gallery</div>
+          <h3 className="font-display uppercase text-3xl md:text-4xl">A look inside the kitchen.</h3>
+          <div className="mx-auto mt-4 h-[3px] w-16 bg-ember" />
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+          {GALLERY_IMAGES.map((img, i) => (
+            <button
+              key={img.alt}
+              onClick={() => openLightbox(i)}
+              className="relative aspect-square overflow-hidden bg-muted group cursor-pointer border border-ink/10"
+            >
+              <img
+                src={img.src}
+                alt={img.alt}
+                loading="lazy"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors" />
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Google Map */}
+      <div className="mx-auto max-w-7xl px-5 md:px-8 pb-20 md:pb-28">
+        <div className="text-center mb-10">
+          <div className="text-xs uppercase tracking-[0.28em] text-ember mb-2">Find us</div>
+          <h3 className="font-display uppercase text-3xl md:text-4xl">Get here hungry.</h3>
+          <div className="mx-auto mt-4 h-[3px] w-16 bg-ember" />
+        </div>
+        <div className="border border-ink/10 shadow-[var(--shadow-paper)] overflow-hidden">
+          <iframe
+            title="Cutten Kitchen Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.3!2d-95.518!3d29.915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c5c5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2s6935%20Farm%20to%20Market%201960%20Rd%20W%2C%20Houston%2C%20TX%2077069!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+            width="100%"
+            height="420"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+
+      {/* Lightbox */}
+      {lightbox !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-ink/95 flex items-center justify-center p-4"
+          onClick={closeLightbox}
+        >
+          <button
+            onClick={closeLightbox}
+            className="absolute top-5 right-5 text-cream/70 hover:text-cream text-2xl font-light"
+            aria-label="Close gallery"
+          >
+            ✕
+          </button>
+          <button
+            onClick={(e) => { e.stopPropagation(); prevImage(); }}
+            className="absolute left-4 md:left-8 text-cream/70 hover:text-cream text-3xl font-light"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+          <img
+            src={GALLERY_IMAGES[lightbox].src}
+            alt={GALLERY_IMAGES[lightbox].alt}
+            className="max-h-[85vh] max-w-[90vw] object-contain shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            onClick={(e) => { e.stopPropagation(); nextImage(); }}
+            className="absolute right-4 md:right-8 text-cream/70 hover:text-cream text-3xl font-light"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-cream/70 text-sm tracking-widest uppercase">
+            {lightbox + 1} / {GALLERY_IMAGES.length}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
