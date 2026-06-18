@@ -521,7 +521,7 @@ function Visit() {
         <div className="md:col-span-6 grid sm:grid-cols-2 gap-5">
           {[
             { k: "Address", v: ["6935 FM 1960 Rd W", "Houston, TX 77069"] },
-            { k: "Phone", v: ["(281) 809-4214"] },
+            { k: "Phone", v: ["(281) 836-5558"] },
             {
               k: "Hours",
               v: ["Tue – Thu · 11a – 9p", "Fri – Sat · 11a – 10p", "Sun · 12p – 8p"],
