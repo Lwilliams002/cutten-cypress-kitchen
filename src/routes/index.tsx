@@ -459,11 +459,6 @@ function Menu() {
   );
 }
 
-import { useState } from "react";
-import crabRice from "@/assets/crab-rice.jpg";
-import heroBoil2 from "@/assets/hero-boil.jpg";
-import shrimp from "@/assets/shrimp.jpg";
-import wings from "@/assets/wings.jpg";
 
 const GALLERY_IMAGES = [
   { src: heroBoil, alt: "Breakfast Bowl" },
