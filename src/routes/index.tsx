@@ -6,19 +6,21 @@ import chickenFried from "@/assets/chickenfriedsteak.jpg";
 import poboy from "@/assets/poboy.jpg";
 import logo from "@/assets/logo.png";
 
+const ORDER_URL = "https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Cutten Kitchen — Cajun Seafood Boils in North Cypress, TX" },
+      { title: "Cutten Kitchen — Authentic American Western Restaurant" },
       {
         name: "description",
         content:
-          "Cutten Kitchen brings bold Houston-born Cajun seafood boils, fried wings, and Southern comfort to North Cypress, Texas. Order pickup, delivery, or dine in.",
+          "Cutten Kitchen serves authentic American Western classics — Chicken Fried Chicken, grilled Meatloaf, Jerk Lamb Chops and Southern brunch — now in North Cypress, TX.",
       },
       { property: "og:title", content: "Cutten Kitchen — North Cypress, TX" },
       {
         property: "og:description",
-        content: "Cajun seafood boils, wings, and Southern comfort food.",
+        content: "Authentic American Western restaurant. Chicken fried classics, brunch all day.",
       },
       { property: "og:image", content: heroBoil },
       { name: "twitter:card", content: "summary_large_image" },
@@ -40,6 +42,8 @@ function Home() {
       <Marquee />
       <Nav />
       <Hero />
+      <Tagline />
+      <ThreeCards />
       <Signatures />
       <About />
       <Menu />
@@ -51,11 +55,11 @@ function Home() {
 
 function Marquee() {
   const items = [
-    "Cajun seafood boils",
-    "Slow-smoked wings",
-    "Now serving North Cypress",
+    "Authentic American Western",
+    "Chicken fried classics",
+    "Brunch served all day",
     "Family owned · Houston born",
-    "Pickup · Delivery · Dine in",
+    "Now serving North Cypress, TX",
   ];
   const row = [...items, ...items, ...items];
   return (
@@ -74,30 +78,30 @@ function Marquee() {
 
 function Nav() {
   return (
-    <header className="sticky top-0 z-40 backdrop-blur bg-cream/85 border-b border-ink/10">
-      <div className="mx-auto max-w-7xl px-5 md:px-8 h-16 md:h-20 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Cutten Kitchen" className="h-9 md:h-11 w-auto" />
+    <header className="sticky top-0 z-40 backdrop-blur bg-cream/90 border-b border-ink/10">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 h-16 md:h-20 grid grid-cols-2 md:grid-cols-3 items-center">
+        <nav className="hidden md:flex items-center gap-7 text-xs font-semibold uppercase tracking-[0.22em]">
+          <a href={ORDER_URL} target="_blank" rel="noreferrer" className="text-ember hover:text-ember-deep">
+            Order Online
+          </a>
+          <a href="#menu" className="hover:text-ember transition-colors">Menu</a>
+          <a href="#visit" className="hover:text-ember transition-colors">Visit</a>
+        </nav>
+        <a href="#top" className="flex items-center justify-self-start md:justify-self-center gap-2">
+          <img src={logo} alt="Cutten Kitchen" className="h-10 md:h-12 w-auto" />
         </a>
-        <nav className="hidden md:flex items-center gap-9 text-sm font-medium uppercase tracking-[0.18em]">
-          <a href="#menu" className="hover:text-ember transition-colors">
-            Menu
-          </a>
-          <a href="#about" className="hover:text-ember transition-colors">
-            Story
-          </a>
-          <a href="#visit" className="hover:text-ember transition-colors">
-            Visit
-          </a>
+        <nav className="hidden md:flex items-center gap-7 justify-self-end text-xs font-semibold uppercase tracking-[0.22em]">
+          <a href="#about" className="hover:text-ember transition-colors">Story</a>
+          <a href="#catering" className="hover:text-ember transition-colors">Catering</a>
+          <a href="#visit" className="hover:text-ember transition-colors">Contact</a>
         </nav>
         <a
-          href="https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7"
+          href={ORDER_URL}
           target="_blank"
           rel="noreferrer"
-          className="inline-flex items-center gap-2 bg-ember text-primary-foreground px-4 md:px-5 py-2.5 md:py-3 text-xs md:text-sm font-semibold uppercase tracking-[0.18em] hover:bg-ember-deep transition-colors"
+          className="md:hidden justify-self-end bg-ember text-primary-foreground px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em]"
         >
-          Order online
-          <span aria-hidden>→</span>
+          Order
         </a>
       </div>
     </header>
@@ -106,77 +110,126 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
-      <div className="mx-auto max-w-7xl px-5 md:px-8 pt-10 md:pt-16 pb-12 md:pb-20">
-        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-end">
-          <div className="md:col-span-7 reveal">
-            <div className="flex items-center gap-3 mb-6 text-xs uppercase tracking-[0.28em] text-smoke">
-              <span className="h-px w-10 bg-ink/40" />
-              Now serving North Cypress, TX
-            </div>
-            <h1 className="font-display uppercase leading-[0.85] text-[18vw] md:text-[10.5rem]">
-              Boiled
-              <span className="block text-ember">Buttered.</span>
-              <span className="block text-stroke">Blazed.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-base md:text-lg font-serif italic text-smoke">
-              Houston-born Cajun seafood, slow-smoked wings, and Southern comfort — now firing up
-              plates north of Cypress.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7"
-                target="_blank"
-                rel="noreferrer"
-                className="bg-ember text-primary-foreground px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ember-deep transition-colors shadow-[var(--shadow-ember)]"
-              >
-                Order online
-              </a>
-              <a
-                href="#menu"
-                className="border border-ink/30 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ink hover:text-cream transition-colors"
-              >
-                See the menu
-              </a>
-            </div>
-          </div>
+    <section id="top" className="relative">
+      <div className="relative h-[78vh] min-h-[560px] md:h-[88vh] overflow-hidden">
+        <img
+          src={heroBoil}
+          alt="Cutten Kitchen breakfast bowl"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink/55 via-ink/35 to-ink/70" />
+        <div className="absolute inset-0 grain opacity-20 pointer-events-none" />
 
-          <div className="md:col-span-5 relative">
-            <div className="relative aspect-[4/5] overflow-hidden">
-              <img
-                src={heroBoil}
-                alt="Cajun seafood boil with snow crab, shrimp, corn and potatoes"
-                width={1600}
-                height={2000}
-                className="h-full w-full object-cover"
-              />
-              <div className="absolute inset-0 ring-1 ring-ink/10" />
-            </div>
-            <div className="absolute -bottom-4 -left-4 md:-left-6 bg-cream border border-ink/15 px-4 py-3 shadow-[var(--shadow-paper)]">
-              <div className="text-[10px] uppercase tracking-[0.25em] text-smoke">
-                House favorite
-              </div>
-              <div className="font-display text-2xl">Breakfast Bowl</div>
-            </div>
+        <div className="relative h-full mx-auto max-w-5xl px-6 flex flex-col items-center justify-center text-center text-cream reveal">
+          <div className="text-[11px] md:text-xs uppercase tracking-[0.4em] text-cream/80 mb-6">
+            ✦ Est. Houston · North Cypress, TX ✦
+          </div>
+          <h1 className="font-display uppercase leading-[0.85] text-[20vw] md:text-[10rem]">
+            Cutten Kitchen
+          </h1>
+          <div className="mt-5 h-[3px] w-24 bg-ember" />
+          <p className="mt-5 font-serif italic text-lg md:text-2xl text-cream/90 max-w-2xl">
+            Authentic American Western Restaurant
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3 justify-center">
+            <a
+              href={ORDER_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-ember text-primary-foreground px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] hover:bg-ember-deep transition-colors shadow-[var(--shadow-ember)]"
+            >
+              Order Online
+            </a>
+            <a
+              href="#menu"
+              className="border border-cream/70 text-cream px-7 py-4 text-sm font-semibold uppercase tracking-[0.22em] hover:bg-cream hover:text-ink transition-colors"
+            >
+              View Menu
+            </a>
           </div>
         </div>
       </div>
+    </section>
+  );
+}
 
-      {/* Strip stats */}
-      <div className="border-y border-ink/15 bg-cream-deep">
-        <div className="mx-auto max-w-7xl px-5 md:px-8 grid grid-cols-2 md:grid-cols-4 divide-x divide-ink/10">
-          {[
-            ["Est.", "Houston"],
-            ["Style", "Cajun · Southern"],
-            ["Hours", "Tue–Sun · 11–10"],
-            ["Area", "North Cypress, TX"],
-          ].map(([k, v]) => (
-            <div key={k} className="py-5 md:py-7 px-4 md:px-6">
-              <div className="text-[10px] uppercase tracking-[0.28em] text-smoke">{k}</div>
-              <div className="mt-1 font-display text-xl md:text-2xl">{v}</div>
+function Tagline() {
+  return (
+    <section className="bg-cream">
+      <div className="mx-auto max-w-4xl px-6 py-20 md:py-28 text-center">
+        <h2 className="font-display uppercase text-4xl md:text-6xl leading-[0.95]">
+          Authentic American <br className="hidden md:block" />
+          <span className="text-ember">Western</span> Restaurant
+        </h2>
+        <div className="mx-auto mt-6 h-[3px] w-20 bg-ember" />
+        <p className="mt-8 font-serif text-lg md:text-xl leading-relaxed text-smoke">
+          American Western cuisine serving classic dishes like Chicken Fried Chicken,
+          grilled Meatloaf and Jerk Lamb Chops. Our signature Blueberry Lemon Drop and
+          Island Tings are the perfect pairing to any entrée — and we've got a kids menu,
+          highchairs, and outdoor seating for you and your pets.
+        </p>
+      </div>
+    </section>
+  );
+}
+
+const cards = [
+  {
+    k: "Order Online",
+    img: cornbread,
+    desc: "Craving Cutten? Order now for pickup or delivery and enjoy our Southern classics from home.",
+    cta: "Order Now",
+    href: ORDER_URL,
+    external: true,
+    id: "order",
+  },
+  {
+    k: "Catering",
+    img: frenchToast,
+    desc: "Planning an event? Let us cater your party, corporate gathering, or special occasion.",
+    cta: "Learn More",
+    href: "#visit",
+    external: false,
+    id: "catering",
+  },
+  {
+    k: "Contact Us",
+    img: chickenFried,
+    desc: "Questions or want to reach out? We'd love to hear from you — get in touch any time.",
+    cta: "Get in Touch",
+    href: "#visit",
+    external: false,
+    id: "contact",
+  },
+];
+
+function ThreeCards() {
+  return (
+    <section className="bg-cream-deep border-y border-ink/10">
+      <div className="mx-auto max-w-7xl px-5 md:px-8 py-16 md:py-24 grid md:grid-cols-3 gap-6 md:gap-8">
+        {cards.map((c) => (
+          <article
+            id={c.id}
+            key={c.k}
+            className="bg-card border border-ink/10 overflow-hidden shadow-[var(--shadow-paper)] flex flex-col"
+          >
+            <div className="aspect-[16/10] overflow-hidden bg-muted">
+              <img src={c.img} alt={c.k} loading="lazy" className="h-full w-full object-cover" />
             </div>
-          ))}
-        </div>
+            <div className="p-7 md:p-8 text-center flex-1 flex flex-col">
+              <h3 className="font-display uppercase text-3xl">{c.k}</h3>
+              <div className="mx-auto mt-3 h-[2px] w-12 bg-ember" />
+              <p className="mt-5 text-smoke leading-relaxed flex-1">{c.desc}</p>
+              <a
+                href={c.href}
+                {...(c.external ? { target: "_blank", rel: "noreferrer" } : {})}
+                className="mt-7 inline-block border-2 border-ember text-ember px-5 py-3 text-xs font-semibold uppercase tracking-[0.22em] hover:bg-ember hover:text-primary-foreground transition-colors"
+              >
+                {c.cta}
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </section>
   );
@@ -216,19 +269,12 @@ const dishes = [
 function Signatures() {
   return (
     <section className="mx-auto max-w-7xl px-5 md:px-8 py-20 md:py-28">
-      <div className="flex items-end justify-between gap-6 mb-10 md:mb-14">
-        <div>
-          <div className="text-xs uppercase tracking-[0.28em] text-ember mb-3">01 — Signatures</div>
-          <h2 className="font-display uppercase text-5xl md:text-7xl leading-[0.9]">
-            Plates worth <br /> the drive.
-          </h2>
-        </div>
-        <a
-          href="#menu"
-          className="hidden md:inline text-sm font-semibold uppercase tracking-[0.2em] underline underline-offset-[6px] decoration-ember hover:text-ember"
-        >
-          Full menu →
-        </a>
+      <div className="text-center mb-12 md:mb-16">
+        <div className="text-xs uppercase tracking-[0.28em] text-ember mb-3">01 — Signatures</div>
+        <h2 className="font-display uppercase text-5xl md:text-7xl leading-[0.9]">
+          Plates worth the drive.
+        </h2>
+        <div className="mx-auto mt-5 h-[3px] w-20 bg-ember" />
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
@@ -273,7 +319,7 @@ function About() {
         <div className="md:col-span-5">
           <img
             src={poboy}
-            alt="Shrimp po-boy with Cajun fries"
+            alt="Cutten Kitchen handheld plate"
             loading="lazy"
             className="w-full aspect-[4/5] object-cover"
           />
@@ -285,16 +331,16 @@ function About() {
             <span className="text-ember">kitchen</span> to your <br /> Cypress table.
           </h2>
           <p className="mt-8 font-serif text-lg md:text-xl leading-relaxed text-cream/85 max-w-2xl">
-            Cutten Kitchen started as a neighborhood spot in Houston — built on slow recipes, gulf
-            seafood, and the kind of seasoning your grandmother would nod at. We're bringing that
-            same flame north to Cypress: bigger boils, crispier wings, and a room that feels like a
-            Sunday with family.
+            Cutten Kitchen started as a neighborhood spot in Houston — built on slow recipes,
+            Western classics, and the kind of seasoning your grandmother would nod at. We're
+            bringing that same flame north to Cypress: bigger plates, crispier crusts, and a room
+            that feels like a Sunday with family.
           </p>
 
           <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-6 max-w-xl">
             {[
-              ["Sourced", "Gulf seafood, daily"],
-              ["Seasoned", "House Cajun blend"],
+              ["Sourced", "Fresh, local, daily"],
+              ["Seasoned", "House Western blend"],
               ["Served", "Hot, generous, honest"],
               ["Built for", "Families & big tables"],
             ].map(([k, v]) => (
@@ -370,14 +416,14 @@ const menu = {
 function Menu() {
   return (
     <section id="menu" className="mx-auto max-w-7xl px-5 md:px-8 py-20 md:py-28">
-      <div className="mb-12 md:mb-16">
+      <div className="text-center mb-12 md:mb-16">
         <div className="text-xs uppercase tracking-[0.28em] text-ember mb-3">03 — The menu</div>
         <h2 className="font-display uppercase text-5xl md:text-7xl leading-[0.9]">
           What's <span className="text-ember">cooking.</span>
         </h2>
-        <p className="mt-4 max-w-xl text-smoke">
-          A taste of the line. Menu rotates with the catch — ask your server about tonight's chef
-          specials.
+        <div className="mx-auto mt-5 h-[3px] w-20 bg-ember" />
+        <p className="mt-6 max-w-xl mx-auto text-smoke">
+          A taste of the line. Menu rotates with the season — ask your server about tonight's chef specials.
         </p>
       </div>
 
@@ -424,10 +470,12 @@ function Visit() {
 
           <div className="mt-10 flex flex-wrap gap-3">
             <a
-              href="tel:+12815550100"
+              href={ORDER_URL}
+              target="_blank"
+              rel="noreferrer"
               className="bg-ember text-primary-foreground px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ember-deep transition-colors"
             >
-              Call to order
+              Order Online
             </a>
             <a
               href="https://www.google.com/maps/search/restaurants+north+cypress+tx"
@@ -435,7 +483,7 @@ function Visit() {
               rel="noreferrer"
               className="border border-ink/30 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] hover:bg-ink hover:text-cream transition-colors"
             >
-              Get directions
+              Get Directions
             </a>
           </div>
         </div>
@@ -479,17 +527,14 @@ function Footer() {
             <div className="font-display text-6xl md:text-8xl text-cream leading-none">
               CUTTEN<span className="text-ember">.</span>
             </div>
-            <p className="mt-3 font-serif italic">Houston flavor, Cypress address.</p>
+            <p className="mt-3 font-serif italic">Authentic American Western · North Cypress, TX</p>
           </div>
           <div className="text-xs uppercase tracking-[0.25em] space-y-1.5">
-            <a href="#menu" className="block hover:text-ember">
-              Menu
-            </a>
-            <a href="#about" className="block hover:text-ember">
-              Story
-            </a>
-            <a href="#visit" className="block hover:text-ember">
-              Visit
+            <a href="#menu" className="block hover:text-ember">Menu</a>
+            <a href="#about" className="block hover:text-ember">Story</a>
+            <a href="#visit" className="block hover:text-ember">Visit</a>
+            <a href={ORDER_URL} target="_blank" rel="noreferrer" className="block hover:text-ember">
+              Order Online
             </a>
           </div>
         </div>
