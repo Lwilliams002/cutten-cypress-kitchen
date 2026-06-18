@@ -1,10 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
 import heroBoil from "@/assets/breakfastbowl.jpg";
 import cornbread from "@/assets/cornbread.jpg";
 import frenchToast from "@/assets/frenchtoastslider.jpg";
 import chickenFried from "@/assets/chickenfriedsteak.jpg";
 import poboy from "@/assets/poboy.jpg";
 import logo from "@/assets/logo.png";
+import crabRice from "@/assets/crab-rice.jpg";
+import heroBoil2 from "@/assets/hero-boil.jpg";
+import shrimp from "@/assets/shrimp.jpg";
+import wings from "@/assets/wings.jpg";
 
 const ORDER_URL = "https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7";
 
