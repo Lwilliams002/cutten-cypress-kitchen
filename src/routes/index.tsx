@@ -193,7 +193,7 @@ const dishes = [
   {
     name: "Cornbread",
     desc: "Golden, butter-glazed skillet cornbread — sweet, crisp edges, tender middle. House staple.",
-    price: "$8",
+    price: "$3",
     img: cornbread,
     tag: "Bestseller",
   },
