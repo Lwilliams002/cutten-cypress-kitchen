@@ -12,6 +12,7 @@ import shrimp from "@/assets/shrimp.jpg";
 import wings from "@/assets/wings.jpg";
 
 const ORDER_URL = "https://online.skytab.com/fc6635c70f351785ef0fa186491d0ea7";
+const RESERVATIONS_URL = "https://reservations.shift4payments.com/#/681da93d-8ca6-4412-9605-2a5f467b5681";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -52,6 +53,7 @@ function Home() {
       <Signatures />
       <About />
       <Menu />
+      <Reservation />
       <Visit />
       <Footer />
     </div>
@@ -89,16 +91,29 @@ function Nav() {
           <a href={ORDER_URL} target="_blank" rel="noreferrer" className="text-ember hover:text-ember-deep">
             Order Online
           </a>
-          <a href="#menu" className="hover:text-ember transition-colors">Menu</a>
-          <a href="#visit" className="hover:text-ember transition-colors">Visit</a>
+          <a href="#menu" className="hover:text-ember transition-colors">
+            Menu
+          </a>
+          <a href="#reservations" className="hover:text-ember transition-colors">
+            Reservations
+          </a>
+          <a href="#visit" className="hover:text-ember transition-colors">
+            Visit
+          </a>
         </nav>
         <a href="#top" className="flex items-center justify-self-start md:justify-self-center gap-2">
           <img src={logo} alt="Cutten Kitchen" className="h-10 md:h-12 w-auto" />
         </a>
         <nav className="hidden md:flex items-center gap-7 justify-self-end text-xs font-semibold uppercase tracking-[0.22em]">
-          <a href="#about" className="hover:text-ember transition-colors">Story</a>
-          <a href="#catering" className="hover:text-ember transition-colors">Catering</a>
-          <a href="#visit" className="hover:text-ember transition-colors">Contact</a>
+          <a href="#about" className="hover:text-ember transition-colors">
+            Story
+          </a>
+          <a href="#catering" className="hover:text-ember transition-colors">
+            Catering
+          </a>
+          <a href="#visit" className="hover:text-ember transition-colors">
+            Contact
+          </a>
         </nav>
         <a
           href={ORDER_URL}
@@ -534,6 +549,57 @@ function Menu() {
 }
 
 
+function Reservation() {
+  return (
+    <section id="reservations" className="relative overflow-hidden border-y border-cream/10 bg-ink text-cream">
+      <div className="absolute inset-0 grain pointer-events-none opacity-20" />
+      <div className="relative mx-auto grid max-w-7xl gap-10 px-5 py-20 md:grid-cols-12 md:gap-14 md:px-8 md:py-28">
+        <div className="md:col-span-7">
+          <div className="mb-3 text-xs uppercase tracking-[0.28em] text-ember">04 — Reservations</div>
+          <h2 className="max-w-2xl font-display text-5xl uppercase leading-[0.9] md:text-7xl">
+            Book your table <br /> before the rush.
+          </h2>
+          <p className="mt-6 max-w-2xl font-serif text-lg leading-relaxed text-cream/85 md:text-xl">
+            Planning date night, brunch with friends, or a family celebration? Reserve ahead with
+            our Shift4 booking page so we can have the table ready when you arrive.
+          </p>
+
+          <div className="mt-10 flex flex-wrap gap-3">
+            <a
+              href={RESERVATIONS_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="bg-ember px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-ember-deep shadow-(--shadow-ember)"
+            >
+              Reserve a Table
+            </a>
+            <a
+              href="#visit"
+              className="border border-cream/40 px-6 py-4 text-sm font-semibold uppercase tracking-[0.2em] transition-colors hover:bg-cream hover:text-ink"
+            >
+              Find Us
+            </a>
+          </div>
+        </div>
+
+        <div className="grid gap-5 self-start md:col-span-5">
+          {[
+            { k: "Best for", v: "Brunch, dinner, birthdays, and group dining" },
+            { k: "Reserve ahead", v: "Use our booking page to secure your preferred time" },
+            { k: "Need help?", v: "Call ahead for larger parties and special requests" },
+          ].map((item) => (
+            <div key={item.k} className="border border-cream/10 bg-card p-6 text-ink shadow-(--shadow-paper)">
+              <div className="text-[10px] uppercase tracking-[0.28em] text-smoke">{item.k}</div>
+              <div className="mt-2 font-display text-2xl leading-tight">{item.v}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 const GALLERY_IMAGES = [
   { src: heroBoil, alt: "Breakfast Bowl" },
   { src: cornbread, alt: "Cornbread" },
@@ -722,6 +788,7 @@ function Footer() {
           <div className="text-xs uppercase tracking-[0.25em] space-y-1.5">
             <a href="#menu" className="block hover:text-ember">Menu</a>
             <a href="#about" className="block hover:text-ember">Story</a>
+            <a href="#reservations" className="block hover:text-ember">Reservations</a>
             <a href="#visit" className="block hover:text-ember">Visit</a>
             <a href={ORDER_URL} target="_blank" rel="noreferrer" className="block hover:text-ember">
               Order Online
