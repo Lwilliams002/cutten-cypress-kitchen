@@ -11,7 +11,7 @@ import heroBoil2 from "@/assets/hero-boil.jpg";
 import shrimp from "@/assets/shrimp.jpg";
 import wings from "@/assets/wings.jpg";
 
-const ORDER_URL = "https://online.skytab.com/cb090f40924f4f569007e5b0343a45a7";
+const ORDER_URL = "https://online.skytab.com/fc6635c70f351785ef0fa186491d0ea7";
 
 export const Route = createFileRoute("/")({
   head: () => ({
