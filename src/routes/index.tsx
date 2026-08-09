@@ -6,8 +6,6 @@ import frenchToast from "@/assets/frenchtoastslider.jpg";
 import chickenFried from "@/assets/chickenfriedsteak.jpg";
 import poboy from "@/assets/poboy.jpg";
 import logo from "@/assets/logo.png";
-import crabRice from "@/assets/crab-rice.jpg";
-import heroBoil2 from "@/assets/hero-boil.jpg";
 import shrimp from "@/assets/shrimp.jpg";
 import wings from "@/assets/wings.jpg";
 
@@ -465,6 +463,7 @@ const menu = {
     ["OMG Cheesecake", "", "$10"],
     ["Key Lime Pie", "", "$10"],
     ["Cookie Butter Banana Pie", "", "$12"],
+    ["Banana Pudding", "", "$10"],
     ["Bread Pudding", "", "$10"],
     ["New York Cheesecake", "", "$10"],
   ],
@@ -581,8 +580,6 @@ const GALLERY_IMAGES = [
   { src: frenchToast, alt: "French Toast Sliders" },
   { src: chickenFried, alt: "Chicken Fried Steak" },
   { src: poboy, alt: "Po'Boy" },
-  { src: crabRice, alt: "Crab Rice" },
-  { src: heroBoil2, alt: "House Bowl" },
   { src: shrimp, alt: "Shrimp" },
   { src: wings, alt: "Wings" },
 ];
@@ -639,7 +636,7 @@ function Visit() {
             { k: "Phone", v: ["(281) 836-5558"] },
             {
               k: "Hours",
-              v: ["Tue – Thu · 11a – 9p", "Fri – Sat · 11a – 10p", "Sun · 12p – 8p"],
+              v: ["Sun – Wed · 10a – 10p", "Thu – Sat · 10a – 12a"],
             },
             { k: "Follow", v: ["@cuttenkitchen"] },
           ].map((c) => (
