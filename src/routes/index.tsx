@@ -509,12 +509,11 @@ function Menu() {
                 <li key={name} className="border-b border-ink/10 pb-4">
                   <div className="flex items-baseline justify-between gap-4">
                     <span className="font-semibold">{name}</span>
-                    <span className="font-serif italic text-ember whitespace-nowrap">
-                      {price === "MP" ? "MP" : `$${price}`}
-                    </span>
+                    <span className="font-serif italic text-ember whitespace-nowrap">{price}</span>
                   </div>
-                  <p className="text-sm text-smoke mt-1">{desc}</p>
+                  {desc && <p className="text-sm text-smoke mt-1">{desc}</p>}
                 </li>
+
               ))}
             </ul>
           </div>
